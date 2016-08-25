@@ -65,7 +65,7 @@ function deployFromTemplate {
 	write-host ""
 	Get-VMHost | Format-Table
 	$esxHost= read-host -prompt "Enter the name of the host you wish to deploy this VM on"
-	New-VM -Name $vmName -Template $temp -Host $esxHost -RunAsync
+	New-VM -Name $vmName -Template $temp -Host $esxHost
 	Start-VM $vmName | Format-Table
 	menu
 	
